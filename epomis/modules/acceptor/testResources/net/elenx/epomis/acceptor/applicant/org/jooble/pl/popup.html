@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<div class="popup11">
+
+    <div class="popup_wr">
+
+        <div id="mainPopups">
+            <div id="mainApplyPopup">
+                <form class="respont-vac_form" method="POST" name="VacancyForm" id="respondVacForm" action="/ApplyForm/SendCv" enctype="multipart/form-data">
+                    <input type="hidden" value="-511204818887510770" name="JobUid" />
+                    <input type="hidden" value="2372607799845874262" name="SearchId" />
+                    <input type="hidden" value="0" name="AlertViewId" />
+                    <input type="hidden" value="-2224015023149464586" name="ImpressionId" />
+                    <input type="hidden" value="3258934158645375624" name="SessionClickId" />
+                    <input type="hidden" value="-4219943040128239232" name="JdpId" />
+                    <input type="hidden" value="8518481192374986466" name="JdpActionId" />
+                    <input type="hidden" value="0" name="CvId" id="CvIdInputField" />
+                    <input id="applyFileField" name="CvFile" type="file" value="" class="none" accept=".txt, .doc, .docx, .rtf, .pdf, .jpg, .jpeg, .odt" />
+
+                    <header class="applyform__header">
+                        <h2 class="applyform__title onelinetext">Game Test Automation Engineer</h2>
+                        <h5 class="applyform__city onelinetext">Bydgoszcz</h5>
+                    </header>
+
+                    <div class="inputTextFieldBlock applyFormFieldMargin">
+                        <p class="inputTextFieldsLabelWrap">
+                            <label for="nameField" class="inputTextFieldsLabel">Imię</label>
+                        </p>
+                        <div class="inputTextFieldsInputWrap">
+                            <input type="text" id="nameField" name="username" class="commonTextField inputTextFieldsItem" placeholder="Wpisz swoję imię" />
+                        </div>
+                    </div>
+
+                    <div class="inputTextFieldBlock applyFormFieldMargin">
+                        <p class="inputTextFieldsLabelWrap">
+                            <label for="emailField" class="inputTextFieldsLabel">Email</label>
+                        </p>
+                        <div class="inputTextFieldsInputWrap" id="emailLoaderField">
+                            <input type="email" placeholder="Na przykład example@example.com" id="emailField" name="email" value="" class="commonTextField inputTextFieldsItem email-validation" />
+                            <div class="validation">
+                                <div class="required red">Podaj email</div>
+                                <div class="error-email red">Nieprawidłowo wprowadzono email</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inputTextFieldBlock applyFormFieldMargin fileselect-mainwrap-js">
+                        <p class="inputTextFieldsLabelWrap">
+                            <span class="inputTextFieldsLabel">CV</span>
+                        </p>
+                        <p class="inputFileFieldsWrap commonTextField fileselect-js">
+                            <span class="inputFileFieldsName fileselecttext-js">Plik nie został wybrany.</span>
+                            <span class="inputFileFieldsLabel">
+								<span class="inputFileFieldsBtn">Wybierz CV</span>
+							</span>
+                            <span class="file-error"></span>
+                        </p>
+                    </div>
+
+                    <div id="checkbox-insert"></div>
+
+                    <div class="applyFormFieldMarginLg coveringLetter coveringLetter-js" data-activeclass="disabled">
+                        <p class="inputTextFieldsLabelWrap textArea__lettertitle">
+                            <label for="itemCoverLetter" class="inputTextFieldsLabel">Tekst motywacyjny</label>
+                            <span class="hide-letter-js hideShowLetterBtn">
+								<span class="letter-hidetext common__dashedlink">Nie dodawaj</span>
+								<span class="letter-showtext common__dashedlink">Dodaj</span>
+							</span>
+                        </p>
+                        <div class="textAreaFieldBlock textAreaLetterShow">
+                            <p class="textAreaFieldWrap">
+                                <textarea id="itemCoverLetter" rows="5" name="CoverLetter" class="textAreaFieldItem commonTextField customTextArea"></textarea>
+                            </p>
+                        </div>
+                    </div>
+
+                    <footer class="applyform__footer">
+
+                        <div class="jdp-tooltip jdp-tooltip-agreement jdp-tooltip__bottom jdp-tooltip__botom-right">
+                            <div class="tooltip-agreement__wrap">
+								<span class="tooltip-agreement__checkbox-wrap">
+									<label class="commonManySelectedBlock commonCheckboxContainer" for="agreementCheckbox">
+										<input type="checkbox" id="agreementCheckbox" class="none" />
+										<span class="contentCommonLikeNativeWrap">
+											<span class="likeCommonCheckboxItem likeCommonCheckboxItem-xs agreement-checkbox-wrap-js">
+												<span class="likeCommonCheckboxItemRounder"></span>
+												<span class="likeCommonCheckboxIconWrap">
+													<span class="likeCommonCheckboxIcon"></span>
+												</span>
+											</span>
+										</span>
+									</label>
+								</span>
+                                <div class="jdp-tooltip_tet">
+                                    <p class="jdp-tooltip_wraptext">
+                                        Akceptuję <a target='_blank' href='/info/terms' class='jdp-tooltip_url'>Warunki korzystania</a> z portalu Jooble. Rozumiem, iż Jooble nie jest autorem i, odpowiednio, nie niesie odpowiedzialności za treść tej oferty pracy, i wyśle moje dane oraz CV do pracodawcy na adres <span class='jdp-tooltip_img'><img height='15' src='/ImageGenerator/Email?jobUid=-511204818887510770' /></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="applyform__footer-btn-wrap">
+                            <button class="applyform__sentbtn jooble_apply_button" id="sendCvBtn">
+                                <span>aplikować</span>
+                            </button>
+                        </p>
+
+                    </footer>
+                </form>
+            </div>
+
+            <div id="additionalPopups"></div>
+            <div id="loaderPopups"></div>
+
+            <div class="close abandonForm-js"></div>
+        </div>
+
+        <div id="assetsPopups"></div>
+    </div>
+
+    <div class="back-noclose"></div>
+</div>
+<script id="checkboxTemplate" type="text/template">
+    <div class="applyFormFieldMargin">
+        <div class="manyCanBeSelected">
+            <p class="input_wrapp checkboxSpecialWrap">
+                <label class="commonManySelectedBlock commonCheckboxContainer" for="saveCheckboxCv">
+                    <input type="checkbox" id="saveCheckboxCv" value="true" checked name="SaveCV" class="none" />
+                    <span class="contentCommonLikeNativeWrap">
+						<span class="likeCommonCheckboxItem">
+							<span class="likeCommonCheckboxItemRounder"></span>
+							<span class="likeCommonCheckboxIconWrap">
+								<span class="likeCommonCheckboxIcon"></span>
+							</span>
+						</span>
+						<span class="commonLikeNativeLabelContent">
+							<span class="commonLikeNativeLabelPrimaryText">Zachować te CV, aby aplikować z nim w przyszłości</span>
+						</span>
+					</span>
+                </label>
+            </p>
+        </div>
+    </div>
+</script>
+<script id="cvSaveAndSent" type="text/template">
+    <div class="applyform__cv-success">
+        <div class="cv-success__sending-status">
+            <div class="sending-status__circle sending-status__circle_check"></div>
+            <h3 class="sending-status__title sending-status__title_sm">Twoje CV zostało pomyślnie wysłane a zapisane w Twoim profilu</h3>
+        </div>
+
+        <p class="cv-success__btn-wrap">
+            <button class="cv-success__btn cvapply__btn_orginial cvapply__btn">OK</button>
+        </p>
+    </div>
+</script>
+<script id="cvSaveAndSent" type="text/template">
+    <div class="applyform__cv-success">
+        <div class="cv-success__sending-status">
+            <div class="sending-status__circle sending-status__circle_check"></div>
+            <h3 class="sending-status__title sending-status__title_sm">Pomyślnie wysłaliśmy Twoje CV</h3>
+        </div>
+
+        <p class="cv-success__btn-wrap">
+            <button class="cv-success__btn cvapply__btn_orginial cvapply__btn">OK</button>
+        </p>
+    </div>
+</script>
+<script id="loaderPopup" type="text/template">
+    <div class="apl-frm-loaderbl">
+        <div class="apl-frm-loaderbl__loader"></div>
+    </div>
+</script>
